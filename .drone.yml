@@ -6,4 +6,5 @@ steps:
   - name: project test
     image: node:alpine
     commands:
+      - npm ci
       - npm test
