@@ -1,0 +1,9 @@
+kind: pipeline
+name: master
+type: docker
+
+steps:
+  - name: project test
+    image: node:alpine
+    commands:
+      - npm test
