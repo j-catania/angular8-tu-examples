@@ -1,5 +1,5 @@
 # Angular8TuExamples
-[![Build Status](https://drone.jcatania.io/api/badges/Juu-/angular8-tu-examples/status.svg)](https://drone.jcatania.io/Juu-/angular8-tu-examples)
+![Build Status](https://github.com/Juu-/angular8-tu-examples/workflows/Angular%20CI/badge.svg)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
