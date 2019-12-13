@@ -9,6 +9,7 @@ import {MonServiceService} from './services/mon-service.service';
 export class AppComponent implements OnInit {
 
   title = 'angular8-tu-examples';
+  logged = false;
 
   constructor(private service: MonServiceService) {
   }
@@ -17,5 +18,12 @@ export class AppComponent implements OnInit {
     this.service
       .getUsers()
       .subscribe(value => console.log(value));
+  }
+
+  connection(username: string) {
+    this.service.getUserByUserName(username).subscribe(value => {
+      this.logged = true;
+      console.log(value)
+    });
   }
 }

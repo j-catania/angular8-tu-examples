@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {User} from '../models/user';
 
@@ -13,7 +13,12 @@ export class MonServiceService {
   }
 
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users')
+    return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users');
+  }
+
+  getUserByUserName(userName: string): Observable<User[]> {
+
+    return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users', { params: new HttpParams().set('username', userName) });
   }
 
 }

@@ -21,8 +21,9 @@ describe('MonServiceService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('get users list', () => {
-    service.getUsers().subscribe(value => console.log(value));
+  it('get users list', async () => {
+    const value = await service.getUsers().toPromise();
+    expect(value.length).toEqual(10);
   });
 
 });
